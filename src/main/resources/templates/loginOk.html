@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>激活成功</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/loginOk.css" />
+		<style>
+			#weixin-tip {
+				display: none;
+				position: fixed;
+				left: 0;
+				top: 0;
+				background: rgba(0, 0, 0, 0.7);
+				filter: alpha(opacity=70);
+				width: 100%;
+				height: 100%;
+				z-index: 100;
+			}
+			
+			#weixin-tip .close {
+				color: #fff;
+				padding: 0.05rem;
+				font: bold 20px/24px simsun;
+				text-shadow: 0 1px 0 #ddd;
+				position: absolute;
+				top: 0;
+				left: 5%;
+			}
+		</style>
+		<script>
+			function resize() {
+				var docEl = document.documentElement;
+				var clientWidth = window.innerWidth;
+				if(!clientWidth) return;
+				if(clientWidth >= 640) {
+					docEl.style.fontSize = '100px';
+				} else {
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				}
+			}
+			resize()
+		</script>
+
+	</head>
+
+	<body style="background: #FFFFFF;">
+		<div id="weixin-tip">
+			<p id="p_weixin">
+				<img src="images/live_weixin.png" alt="微信扫描打开APP下载链接提示代码优化" style="width: 3.6rem;position: absolute;top: 0;right: 0.42rem;">
+			</p>
+		</div>
+		<div class="wrap">
+			<img src="images/ok.png" />
+			<div style="color: #000000;margin: 0.23rem 0 5px 0;text-align: center;">恭喜您激活成功！</div>
+			<div style="color: #666;font-size: 12px;text-align: center;">登录使用分润移动端----HRT展业宝,掌上管理更便捷！</div>
+			<div class="submitBtn" id="btnNext">没有HRT展业宝(立即下载)</div>
+			<div style="color: #1B9AF6;margin: 0.1rem 0 5px 0;text-align: center; font-size: 12px;" id="open">已有HRT展业宝(立即打开)</div>
+		</div>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/loginok.js"></script>
+</html>

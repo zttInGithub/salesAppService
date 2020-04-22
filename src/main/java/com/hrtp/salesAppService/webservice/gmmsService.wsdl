@@ -1,0 +1,493 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.gmms.hrt.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="IGmmsServiceService" targetNamespace="http://webservice.gmms.hrt.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.gmms.hrt.com/" elementFormDefault="unqualified" targetNamespace="http://webservice.gmms.hrt.com/" version="1.0">
+
+  <xs:element name="realQuery" type="tns:realQuery"/>
+
+  <xs:element name="realQueryResponse" type="tns:realQueryResponse"/>
+
+  <xs:element name="saveAgentInfo" type="tns:saveAgentInfo"/>
+
+  <xs:element name="saveAgentInfoResponse" type="tns:saveAgentInfoResponse"/>
+
+  <xs:element name="saveAggPayTermSub" type="tns:saveAggPayTermSub"/>
+
+  <xs:element name="saveAggPayTermSubResponse" type="tns:saveAggPayTermSubResponse"/>
+
+  <xs:element name="saveMerchantInfo" type="tns:saveMerchantInfo"/>
+
+  <xs:element name="saveMerchantInfoResponse" type="tns:saveMerchantInfoResponse"/>
+
+  <xs:element name="saveTermAcc" type="tns:saveTermAcc"/>
+
+  <xs:element name="saveTermAccResponse" type="tns:saveTermAccResponse"/>
+
+  <xs:element name="saveTermAccSub" type="tns:saveTermAccSub"/>
+
+  <xs:element name="saveTermAccSubResponse" type="tns:saveTermAccSubResponse"/>
+
+  <xs:element name="updateAgentInfo" type="tns:updateAgentInfo"/>
+
+  <xs:element name="updateAgentInfoResponse" type="tns:updateAgentInfoResponse"/>
+
+  <xs:element name="updateMerchantInfo" type="tns:updateMerchantInfo"/>
+
+  <xs:element name="updateMerchantInfoResponse" type="tns:updateMerchantInfoResponse"/>
+
+  <xs:complexType name="saveAgentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:agentUnitInfo"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="agentUnitInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accType" type="xs:string"/>
+      <xs:element minOccurs="0" name="agentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="amountConfirmDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="areaType" type="xs:string"/>
+      <xs:element minOccurs="0" name="baddr" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankAccName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankAccNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankArea" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankBranch" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankOpenAcc" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankType" type="xs:string"/>
+      <xs:element minOccurs="0" name="bno" type="xs:string"/>
+      <xs:element minOccurs="0" name="buid" type="xs:int"/>
+      <xs:element minOccurs="0" name="businessContacts" type="xs:string"/>
+      <xs:element minOccurs="0" name="businessContactsMail" type="xs:string"/>
+      <xs:element minOccurs="0" name="businessContactsPhone" type="xs:string"/>
+      <xs:element minOccurs="0" name="contact" type="xs:string"/>
+      <xs:element minOccurs="0" name="contactPhone" type="xs:string"/>
+      <xs:element minOccurs="0" name="contactTel" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="cronym" type="xs:string"/>
+      <xs:element minOccurs="0" name="isM35" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalPerson" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalType" type="xs:string"/>
+      <xs:element minOccurs="0" name="maintainDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="maintainType" type="xs:string"/>
+      <xs:element minOccurs="0" name="maintainUid" type="xs:int"/>
+      <xs:element minOccurs="0" name="maintainUserId" type="xs:int"/>
+      <xs:element minOccurs="0" name="mid" type="xs:string"/>
+      <xs:element minOccurs="0" name="openDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="parCompany" type="xs:string"/>
+      <xs:element minOccurs="0" name="payBankId" type="xs:string"/>
+      <xs:element minOccurs="0" name="registryNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="riskAmount" type="xs:double"/>
+      <xs:element minOccurs="0" name="riskContact" type="xs:string"/>
+      <xs:element minOccurs="0" name="riskContactMail" type="xs:string"/>
+      <xs:element minOccurs="0" name="riskContactPhone" type="xs:string"/>
+      <xs:element minOccurs="0" name="rno" type="xs:string"/>
+      <xs:element minOccurs="0" name="secondContact" type="xs:string"/>
+      <xs:element minOccurs="0" name="secondContactPhone" type="xs:string"/>
+      <xs:element minOccurs="0" name="secondContactTel" type="xs:string"/>
+      <xs:element minOccurs="0" name="signUserId" type="xs:int"/>
+      <xs:element minOccurs="0" name="unno" type="xs:string"/>
+      <xs:element minOccurs="0" name="upperUnit1" type="xs:string"/>
+      <xs:element minOccurs="0" name="upperUnit2" type="xs:string"/>
+      <xs:element minOccurs="0" name="upperUnit3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveAgentInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateMerchantInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:merchantInfo"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="merchantInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accExpdate" type="xs:string"/>
+      <xs:element minOccurs="0" name="accNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="accType" type="xs:string"/>
+      <xs:element minOccurs="0" name="accountStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="areaType" type="xs:string"/>
+      <xs:element minOccurs="0" name="baddr" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankAccName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankAccNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankBranch" type="xs:string"/>
+      <xs:element minOccurs="0" name="bankFeeRate" type="xs:double"/>
+      <xs:element minOccurs="0" name="bankType" type="xs:string"/>
+      <xs:element minOccurs="0" name="bno" type="xs:string"/>
+      <xs:element minOccurs="0" name="cby" type="xs:string"/>
+      <xs:element minOccurs="0" name="conMccid" type="xs:string"/>
+      <xs:element minOccurs="0" name="contactPerson" type="xs:string"/>
+      <xs:element minOccurs="0" name="contactPhone" type="xs:string"/>
+      <xs:element minOccurs="0" name="creditBankRate" type="xs:string"/>
+      <xs:element minOccurs="0" name="creditFeeamt" type="xs:string"/>
+      <xs:element minOccurs="0" name="dailyLimit" type="xs:double"/>
+      <xs:element minOccurs="0" name="dcashRate" type="xs:double"/>
+      <xs:element minOccurs="0" name="dealAmt" type="xs:double"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="feeAmt" type="xs:double"/>
+      <xs:element minOccurs="0" name="foreignFeeRate" type="xs:double"/>
+      <xs:element minOccurs="0" name="identificationValid" type="xs:string"/>
+      <xs:element minOccurs="0" name="ifCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="industryType" type="xs:string"/>
+      <xs:element minOccurs="0" name="isM35" type="xs:int"/>
+      <xs:element minOccurs="0" name="legalNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalPerson" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalType" type="xs:string"/>
+      <xs:element minOccurs="0" name="licenseValid" type="xs:string"/>
+      <xs:element minOccurs="0" name="mainTenance" type="xs:string"/>
+      <xs:element minOccurs="0" name="maintainDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="mccid" type="xs:int"/>
+      <xs:element minOccurs="0" name="merchantType" type="xs:int"/>
+      <xs:element minOccurs="0" name="mid" type="xs:string"/>
+      <xs:element minOccurs="0" name="minfo1" type="xs:string"/>
+      <xs:element minOccurs="0" name="minfo2" type="xs:string"/>
+      <xs:element minOccurs="0" name="naturalRate" type="xs:double"/>
+      <xs:element minOccurs="0" name="outsideBankRate" type="xs:string"/>
+      <xs:element minOccurs="0" name="payBankId" type="xs:string"/>
+      <xs:element minOccurs="0" name="presettime" type="xs:string"/>
+      <xs:element minOccurs="0" name="province_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="QX_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="quotaamt" type="xs:double"/>
+      <xs:element minOccurs="0" name="raddr" type="xs:string"/>
+      <xs:element minOccurs="0" name="rname" type="xs:string"/>
+      <xs:element minOccurs="0" name="sales" type="xs:string"/>
+      <xs:element minOccurs="0" name="scanRate" type="xs:double"/>
+      <xs:element minOccurs="0" name="secondLimit" type="xs:double"/>
+      <xs:element minOccurs="0" name="secondRate" type="xs:double"/>
+      <xs:element minOccurs="0" name="secondRate2" type="xs:double"/>
+      <xs:element minOccurs="0" name="sendCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="settMethod" type="xs:int"/>
+      <xs:element minOccurs="0" name="settleCycle" type="xs:int"/>
+      <xs:element minOccurs="0" name="settleMerger" type="xs:string"/>
+      <xs:element minOccurs="0" name="settleMethod" type="xs:string"/>
+      <xs:element minOccurs="0" name="settleRange" type="xs:string"/>
+      <xs:element minOccurs="0" name="singleLimit" type="xs:double"/>
+      <xs:element minOccurs="0" name="tcashRate" type="xs:double"/>
+      <xs:element minOccurs="0" name="tranSterm" type="xs:int"/>
+      <xs:element minOccurs="0" name="unno" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateMerchantInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveMerchantInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:merchantInfo"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveMerchantInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateAgentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:agentUnitInfo"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateAgentInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveTermAcc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:termAcc"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="termAcc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cby" type="xs:string"/>
+      <xs:element minOccurs="0" name="depositAmt" type="xs:int"/>
+      <xs:element minOccurs="0" name="depositFlag" type="xs:int"/>
+      <xs:element minOccurs="0" name="mid" type="xs:string"/>
+      <xs:element minOccurs="0" name="modleId" type="xs:string"/>
+      <xs:element minOccurs="0" name="nonConnection" type="xs:string"/>
+      <xs:element minOccurs="0" name="rate" type="xs:double"/>
+      <xs:element minOccurs="0" name="rebateType" type="xs:int"/>
+      <xs:element minOccurs="0" name="secondRate" type="xs:double"/>
+      <xs:element minOccurs="0" name="sn" type="xs:string"/>
+      <xs:element minOccurs="0" name="snType" type="xs:string"/>
+      <xs:element minOccurs="0" name="tid" type="xs:string"/>
+      <xs:element minOccurs="0" name="typeflag" type="xs:int"/>
+      <xs:element minOccurs="0" name="unno" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveTermAccResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="realQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="realQueryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveTermAccSub">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:termAcc"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveTermAccSubResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveAggPayTermSub">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:aggPayTerm"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="aggPayTerm">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bapid" type="xs:int"/>
+      <xs:element minOccurs="0" name="cby" type="xs:string"/>
+      <xs:element minOccurs="0" name="mid" type="xs:string"/>
+      <xs:element minOccurs="0" name="minfo1" type="xs:string"/>
+      <xs:element minOccurs="0" name="minfo2" type="xs:string"/>
+      <xs:element minOccurs="0" name="qrtid" type="xs:string"/>
+      <xs:element minOccurs="0" name="shopname" type="xs:string"/>
+      <xs:element minOccurs="0" name="typeflag" type="xs:int"/>
+      <xs:element minOccurs="0" name="unno" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveAggPayTermSubResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="realQueryResponse">
+    <wsdl:part element="tns:realQueryResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="realQuery">
+    <wsdl:part element="tns:realQuery" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateMerchantInfo">
+    <wsdl:part element="tns:updateMerchantInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveMerchantInfoResponse">
+    <wsdl:part element="tns:saveMerchantInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveAggPayTermSubResponse">
+    <wsdl:part element="tns:saveAggPayTermSubResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveTermAccSub">
+    <wsdl:part element="tns:saveTermAccSub" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveAgentInfo">
+    <wsdl:part element="tns:saveAgentInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveTermAccResponse">
+    <wsdl:part element="tns:saveTermAccResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateAgentInfoResponse">
+    <wsdl:part element="tns:updateAgentInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveAggPayTermSub">
+    <wsdl:part element="tns:saveAggPayTermSub" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateMerchantInfoResponse">
+    <wsdl:part element="tns:updateMerchantInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateAgentInfo">
+    <wsdl:part element="tns:updateAgentInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveMerchantInfo">
+    <wsdl:part element="tns:saveMerchantInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveAgentInfoResponse">
+    <wsdl:part element="tns:saveAgentInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveTermAcc">
+    <wsdl:part element="tns:saveTermAcc" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveTermAccSubResponse">
+    <wsdl:part element="tns:saveTermAccSubResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IGmmsService">
+    <wsdl:operation name="saveAgentInfo">
+      <wsdl:input message="tns:saveAgentInfo" name="saveAgentInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:saveAgentInfoResponse" name="saveAgentInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMerchantInfo">
+      <wsdl:input message="tns:updateMerchantInfo" name="updateMerchantInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:updateMerchantInfoResponse" name="updateMerchantInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveMerchantInfo">
+      <wsdl:input message="tns:saveMerchantInfo" name="saveMerchantInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:saveMerchantInfoResponse" name="saveMerchantInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAgentInfo">
+      <wsdl:input message="tns:updateAgentInfo" name="updateAgentInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:updateAgentInfoResponse" name="updateAgentInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTermAcc">
+      <wsdl:input message="tns:saveTermAcc" name="saveTermAcc">
+    </wsdl:input>
+      <wsdl:output message="tns:saveTermAccResponse" name="saveTermAccResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="realQuery">
+      <wsdl:input message="tns:realQuery" name="realQuery">
+    </wsdl:input>
+      <wsdl:output message="tns:realQueryResponse" name="realQueryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTermAccSub">
+      <wsdl:input message="tns:saveTermAccSub" name="saveTermAccSub">
+    </wsdl:input>
+      <wsdl:output message="tns:saveTermAccSubResponse" name="saveTermAccSubResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveAggPayTermSub">
+      <wsdl:input message="tns:saveAggPayTermSub" name="saveAggPayTermSub">
+    </wsdl:input>
+      <wsdl:output message="tns:saveAggPayTermSubResponse" name="saveAggPayTermSubResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IGmmsServiceServiceSoapBinding" type="tns:IGmmsService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="saveAgentInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveAgentInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveAgentInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMerchantInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateMerchantInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateMerchantInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveMerchantInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveMerchantInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveMerchantInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAgentInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateAgentInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateAgentInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="realQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="realQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="realQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTermAcc">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveTermAcc">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveTermAccResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveAggPayTermSub">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveAggPayTermSub">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveAggPayTermSubResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTermAccSub">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveTermAccSub">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveTermAccSubResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IGmmsServiceService">
+    <wsdl:port binding="tns:IGmmsServiceServiceSoapBinding" name="IGmmsServicePort">
+      <soap:address location="http://10.51.130.169:10087/AdmApp/service/gmmsService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
